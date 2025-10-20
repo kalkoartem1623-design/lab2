@@ -1,9 +1,18 @@
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #333;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light-theme {
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+.dark-theme {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
 }
 
 main {
@@ -15,57 +24,165 @@ h1 {
     text-align: center;
 }
 
+.dark-theme h1 {
+    color: #66b3ff;
+}
+
 h2, h3 {
     color: #004080;
+}
+
+.dark-theme h2, .dark-theme h3 {
+    color: #99ccff;
 }
 
 a {
     color: #007bff;
 }
 
+.dark-theme a {
+    color: #66b3ff;
+}
+
 a:hover {
     text-decoration: underline;
 }
 
-header, footer {
+header {
     background-color: #e3eaf2;
     padding: 15px;
     text-align: center;
     border-bottom: 2px solid #b0c4de;
 }
 
-@media (max-width: 1668px) {
-    h1 {
-        font-size: 35px;
-    }
-    
-    h2 {
-        font-size: 28px;
-    }
+.dark-theme header {
+    background-color: #2c3e50;
+    border-bottom: 2px solid #4a6fa5;
+}
 
-    h3 {
-        font-size: 20px;
-    }
-    
-    p {
-        font-size: 18px;
-    }
+#theme-toggle, #load-data, #load-json-data {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark-theme #theme-toggle, .dark-theme #load-data, .dark-theme #load-json-data {
+    background-color: #4a6fa5;
+}
+
+#theme-toggle:hover, #load-data:hover, #load-json-data:hover {
+    background-color: #0056b3;
+}
+
+.dark-theme #theme-toggle:hover, .dark-theme #load-data:hover, .dark-theme #load-json-data:hover {
+    background-color: #3a5f8a;
+}
+
+form {
+    margin: 20px;
+}
+
+#name-input, #comment-name-input, #comment-text-input {
+    padding: 8px;
+    border: 1px solid #b0c4de;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px 0;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+}
+
+#comment-text-input {
+    height: 80px;
+    resize: vertical;
+}
+
+.dark-theme #name-input, .dark-theme #comment-name-input, .dark-theme #comment-text-input {
+    border-color: #4a6fa5;
+    background-color: #2c3e50;
+    color: #f0f0f0;
+}
+
+#add-comment {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark-theme #add-comment {
+    background-color: #4a6fa5;
+}
+
+#add-comment:hover {
+    background-color: #0056b3;
+}
+
+.dark-theme #add-comment:hover {
+    background-color: #3a5f8a;
+}
+
+#greeting-container {
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#comment-list, #data-container, #json-data-container {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #b0c4de;
+    border-radius: 5px;
+}
+
+.dark-theme #comment-list, .dark-theme #data-container, .dark-theme #json-data-container {
+    border-color: #4a6fa5;
+    background-color: #2c3e50;
+}
+
+.comment-item, .json-comment-item {
+    border: 1px solid #b0c4de;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.dark-theme .comment-item, .dark-theme .json-comment-item {
+    border-color: #4a6fa5;
+    background-color: #2c3e50;
+}
+
+.comment-name, .json-comment-name {
+    font-weight: bold;
+    color: #004080;
+}
+
+.dark-theme .comment-name, .dark-theme .json-comment-name {
+    color: #99ccff;
+}
+
+.comment-text, .json-comment-text {
+    margin-top: 5px;
+}
+
+@media (max-width: 1668px) {
+    h1 { font-size: 35px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 20px; }
+    p, #greeting-container, .comment-item, .json-comment-item, #data-container, #json-data-container { font-size: 18px; }
 }
 
 @media (max-width: 767px) {
-    h1 {
-        font-size: 25px;
-    }
-
-    h2 {
-        font-size: 18px;
-    }
-
-    h3 {
-        font-size: 15px;
-    }
-    
-    p {
-        font-size: 12px;
-    }
+    h1 { font-size: 25px; }
+    h2 { font-size: 18px; }
+    h3 { font-size: 15px; }
+    p, #greeting-container, .comment-item, .json-comment-item, #data-container, #json-data-container { font-size: 12px; }
 }

@@ -6,7 +6,7 @@
     <title>Lab2</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="light-theme">
     <header>
         <h1>Лабораторна робота №2</h1>
         <p>HTML і CSS. Створення простої вебсторінки, стилізація та адаптивність.</p>
@@ -30,6 +30,29 @@
         </div>
 
         <p>Для навчання я часто використовую <a href="https://classroom.google.com" target="_blank">Google Classroom</a>.</p>
+        <button id="theme-toggle">Змінити тему</button>
+
+        <form id="greeting-form">
+            <label for="name-input">Ім'я:</label>
+            <input type="text" id="name-input" placeholder="Введіть ваше ім'я">
+        </form>
+        <div id="greeting-container"></div>
+
+        <form id="comment-form">
+            <label for="comment-name-input">Ім'я:</label>
+            <input type="text" id="comment-name-input" placeholder="Введіть ваше ім'я">
+            <label for="comment-text-input">Коментар:</label>
+            <textarea id="comment-text-input" placeholder="Введіть ваш коментар"></textarea>
+            <button type="submit" id="add-comment">Додати</button>
+        </form>
+        <div id="comment-list"></div>
+
+        <button id="load-data">Завантажити дані</button>
+        <div id="data-container"></div>
+
+        <button id="load-json-data">Завантажити JSON дані</button>
+        <div id="json-data-container"></div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
